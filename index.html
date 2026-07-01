@@ -1,17 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"
-<title>Segurança Digital para Idosos</title>
-<link rel="stylesheet" href="style.css">
-</head>
-</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projeto sobre UX e acessibilidade com foco em interfaces inclusivas."
+    />
+    <title>UX e acessibilidade</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <header class="hero">
+      <nav class="top-nav" aria-label="Seções do projeto">
+        <a href="#principios">Princípios</a>
+        <a href="#praticas">Boas práticas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="hero__content">
+        <p class="eyebrow">UX e acessibilidade</p>
+        <h1>Desenvolvendo interfaces inclusivas para todos</h1>
+        <p>
+          Bom design não é apenas bonito. Ele também precisa ser claro,
+          compreensível e utilizável por diferentes perfis de pessoas.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#praticas">Ver boas práticas</a>
+          <button class="button button--secondary" id="toggle-contrast" type="button" aria-pressed="false">
+            Ativar alto contraste
+          </button>
+        </div>
+        <p class="visually-hidden" id="contrast-status" aria-live="polite"></p>
+      </div>
+    </header>
+
+    <main id="conteudo-principal">
+      <section class="section" id="principios">
+        <div class="section__intro">
+          <p class="section__eyebrow">Princípios</p>
+          <h2>Quatro pilares para uma experiência acessível</h2>
+          <p>
+            Ao unir pesquisa, estrutura e testes, podemos criar produtos que
+            respeitam a diversidade de usuários.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Perceptível</h3>
+            <p>As informações devem ser apresentadas de forma clara e legível.</p>
+          </article>
+          <article class="card">
+            <h3>Operável</h3>
+            <p>As interações devem funcionar com teclado, toque e leitores de tela.</p>
+          </article>
+          <article class="card">
+            <h3>Compreensível</h3>
+            <p>O conteúdo precisa ser simples, objetivo e previsível.</p>
+          </article>
+          <article class="card">
+            <h3>Robusto</h3>
+            <p>A interface deve funcionar em diferentes tecnologias e contextos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="praticas">
+        <div class="section__intro">
+          <p class="section__eyebrow">Boas práticas</p>
+          <h2>Pequenos cuidados que fazem muita diferença</h2>
+        </div>
+
+        <ul class="checklist">
+          <li><strong>Estrutura semântica:</strong> use headings, listas e landmarks para organizar o conteúdo.</li>
+          <li><strong>Contraste adequado:</strong> garanta legibilidade visual em todos os cenários.</li>
+          <li><strong>Rótulos claros:</strong> cada campo de formulário deve ter um nome compreensível.</li>
+          <li><strong>Foco visível:</strong> elementos interativos precisam mostrar o estado de navegação.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="contato">
+        <div class="section__intro">
+          <p class="section__eyebrow">Contato</p>
+          <h2>Compartilhe sua ideia ou projeto</h2>
+          <p>Preencha o formulário abaixo para receber mais orientações sobre inclusão digital.</p>
+        </div>
+
+        <form class="form" id="contact-form">
+          <div class="form__field">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="form__field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <fieldset class="fieldset">
+            <legend>Como prefere receber informações?</legend>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="canal" value="e-mail" checked />
+                E-mail
+              </label>
+              <label>
+                <input type="radio" name="canal" value="whatsapp" />
+                WhatsApp
+              </label>
+              <label>
+                <input type="radio" name="canal" value="telefone" />
+                Telefone
+              </label>
+            </div>
+          </fieldset>
+
+          <button class="button button--primary" type="submit">Enviar interesse</button>
+          <p class="form__message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Projeto desenvolvido para mostrar boas práticas de UX e acessibilidade.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
